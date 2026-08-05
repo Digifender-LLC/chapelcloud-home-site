@@ -1,0 +1,10 @@
+{
+	"$schema": "https://cursor.com/schemas/environment.json",
+	"install": "npm install",
+	"terminals": [
+		{
+			"name": "Dev Server",
+			"command": "npm run dev -- --host 0.0.0.0"
+		}
+	]
+}
