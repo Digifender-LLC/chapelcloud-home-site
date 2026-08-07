@@ -1,52 +1,36 @@
-# home-site
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A personal website built with [SvelteKit](https://svelte.dev/docs/kit) and
-[Tailwind CSS](https://tailwindcss.com), deployed to
-[Cloudflare Pages](https://developers.cloudflare.com/pages/) via
-`@sveltejs/adapter-cloudflare`.
+## Getting Started
 
-## Tech stack
-
-- **SvelteKit** (Svelte 5, runes) + **Vite**
-- **Tailwind CSS v4** (with `@tailwindcss/typography` and `@tailwindcss/forms`)
-- **TypeScript**
-- **Cloudflare Pages** adapter + **Wrangler**
-- **ESLint** + **Prettier**
-
-## Getting started
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the dev server:
+First, run the development server:
 
 ```bash
 npm run dev
-# or open the browser automatically
-npm run dev -- --open
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-The site runs at http://localhost:5173.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Useful scripts
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-| Command           | Description                                             |
-| ----------------- | ------------------------------------------------------- |
-| `npm run dev`     | Start the Vite dev server                               |
-| `npm run build`   | Generate Cloudflare types and build for production      |
-| `npm run preview` | Preview the production build with Wrangler Pages        |
-| `npm run check`   | Run `svelte-check` type checking                        |
-| `npm run lint`    | Check formatting (Prettier) and lint (ESLint)           |
-| `npm run format`  | Format the codebase with Prettier                       |
-| `npm run gen`     | Regenerate Cloudflare `worker-configuration.d.ts` types |
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Deploying to Cloudflare Pages
+## Learn More
 
-The build output is written to `.svelte-kit/cloudflare` (configured in
-`wrangler.jsonc`). Connect the repository to Cloudflare Pages and use:
+To learn more about Next.js, take a look at the following resources:
 
-- **Build command:** `npm run build`
-- **Build output directory:** `.svelte-kit/cloudflare`
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
