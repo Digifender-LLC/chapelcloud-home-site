@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { navGroups } from "@/lib/nav";
+import { site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="inline-flex items-center gap-2.5 font-display text-lg font-semibold text-ink"
+              className="inline-flex items-center gap-2.5 font-display text-lg font-semibold text-presence"
             >
               <Image
                 src="/logo.svg"
@@ -19,7 +20,7 @@ export function Footer() {
                 height={32}
                 className="h-8 w-8"
               />
-              ChapelCloud
+              {site.name}
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
               Software, hardware, and managed IT for churches that want reliable
@@ -27,10 +28,10 @@ export function Footer() {
             </p>
             <p className="mt-6 text-sm text-ink-muted">
               <a
-                href="mailto:hello@chapelcloud.example"
+                href={`mailto:${site.email}`}
                 className="font-medium text-ink underline decoration-mist underline-offset-4 hover:decoration-gold"
               >
-                hello@chapelcloud.example
+                {site.email}
               </a>
             </p>
           </div>
@@ -57,7 +58,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-mist/70 pt-8 text-sm text-ink-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} ChapelCloud. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
+          </p>
           <p>B2B technology partner for congregations.</p>
         </div>
       </div>

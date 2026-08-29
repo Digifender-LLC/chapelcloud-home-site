@@ -44,7 +44,7 @@ export function SoftwareProductPage({ product }: { product: SoftwareProduct }) {
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 href="/#contact"
-                className="inline-flex rounded-md bg-ink px-5 py-3 text-base font-semibold text-white transition hover:bg-ink/90"
+                className="inline-flex rounded-md bg-presence px-5 py-3 text-base font-semibold text-white transition hover:bg-presence-deep"
               >
                 Book a consult
               </Link>

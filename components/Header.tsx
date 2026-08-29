@@ -129,7 +129,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:h-[4.25rem] sm:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight text-ink"
+          className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight text-presence"
         >
           <Image
             src="/logo.svg"
@@ -156,7 +156,7 @@ export function Header() {
             href="/#contact"
             className="hidden rounded-md bg-gold px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_20px_-10px_rgba(184,146,63,0.9)] transition hover:bg-gold-deep sm:inline-flex"
           >
-            Talk to sales
+            Talk to us
           </Link>
           <button
             type="button"
@@ -247,7 +247,7 @@ export function Header() {
                 className="mt-4 flex w-full items-center justify-center rounded-md bg-gold px-4 py-3 text-sm font-semibold text-white"
                 onClick={() => setMobileOpen(false)}
               >
-                Talk to sales
+                Talk to us
               </Link>
             </nav>
           </motion.div>

@@ -38,7 +38,7 @@ export function HardwareProductPage({ product }: { product: HardwareProduct }) {
             {product.tagline}
           </p>
         </div>
-        <div className="border-t border-gold/20 bg-ink/95">
+        <div className="border-t border-gold/20 bg-presence/95">
           <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <p className="max-w-2xl text-base leading-relaxed text-white/80">
               {product.overview}

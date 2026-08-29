@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { site } from "@/lib/site";
 
 export function FinalCta() {
   return (
@@ -7,7 +8,7 @@ export function FinalCta() {
       className="scroll-mt-24 border-t border-mist/70 bg-surface-2"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
-        <div className="relative overflow-hidden rounded-2xl bg-ink px-8 py-14 sm:px-14 sm:py-16">
+        <div className="relative overflow-hidden rounded-2xl bg-presence px-8 py-14 sm:px-14 sm:py-16">
           <div
             aria-hidden
             className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-gold/25 blur-3xl"
@@ -25,10 +26,10 @@ export function FinalCta() {
               sketch a practical plan—no pressure, no jargon maze.
             </p>
             <Link
-              href="mailto:hello@chapelcloud.example"
+              href={`mailto:${site.email}`}
               className="mt-8 inline-flex rounded-md bg-gold px-5 py-3 text-base font-semibold text-white transition hover:bg-gold-deep"
             >
-              Book a consult
+              {site.email}
             </Link>
           </div>
         </div>

@@ -47,7 +47,7 @@ export function ManagedProductPage({ product }: { product: ManagedProduct }) {
       </section>
 
       {/* Coverage map — labeled bands */}
-      <section className="bg-ink text-white">
+      <section className="bg-presence text-white">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <h2 className="font-display text-3xl font-semibold tracking-tight">
             What’s under watch
@@ -124,7 +124,7 @@ export function ManagedProductPage({ product }: { product: ManagedProduct }) {
               >
                 <span
                   aria-hidden
-                  className="absolute -left-[5px] top-10 h-2 w-2 rounded-full bg-ink"
+                  className="absolute -left-[5px] top-10 h-2 w-2 rounded-full bg-presence"
                 />
                 <p className="font-display text-xs font-semibold uppercase tracking-[0.14em] text-steel">
                   Moment {String(i + 1).padStart(2, "0")}
