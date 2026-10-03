@@ -57,11 +57,30 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-mist/70 pt-8 text-sm text-ink-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
-          </p>
-          <p>B2B technology partner for congregations.</p>
+        <div className="mt-12 border-t border-mist/70 pt-8 text-sm text-ink-muted">
+          <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
+            <a href="https://digifender.com/legal/chapelcloud/terms" className="hover:text-ink">
+              Draft terms
+            </a>
+            <a href="https://digifender.com/legal/chapelcloud/privacy" className="hover:text-ink">
+              Draft privacy policy
+            </a>
+            <a href="https://digifender.com/legal/chapelcloud/cookies" className="hover:text-ink">
+              Draft cookie notice
+            </a>
+            <a href="https://digifender.com/legal/chapelcloud" className="hover:text-ink">
+              All draft policies
+            </a>
+            <a href="mailto:legal@digifender.com" className="hover:text-ink">
+              Legal contact
+            </a>
+          </nav>
+          <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+            <p>
+              A <a href="https://digifender.com/" className="font-medium text-ink hover:underline">Digifender</a> product.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

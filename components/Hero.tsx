@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative isolate min-h-[calc(100svh-4.25rem)] overflow-hidden">
+    <section className="relative isolate h-[calc(100svh-4rem-1px)] overflow-hidden sm:h-[calc(100svh-4.25rem-1px)]">
       <div
         aria-hidden
         className="absolute inset-0 -z-10"
@@ -31,16 +31,16 @@ export function Hero() {
         width={480}
         height={480}
         aria-hidden
-        className="pointer-events-none absolute -right-[8%] top-[6%] -z-10 h-[min(70vmin,28rem)] w-[min(70vmin,28rem)] opacity-[0.08]"
+        className="pointer-events-none absolute -right-[8%] top-[11%] -z-10 h-[min(76vmin,31rem)] w-[min(76vmin,31rem)] brightness-0 opacity-[0.08]"
         priority
       />
 
-      <div className="mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl flex-col justify-center px-5 py-16 sm:px-8 sm:py-20">
+      <div className="mx-auto flex h-full max-w-6xl flex-col overflow-y-auto px-5 py-5 sm:px-8 sm:py-8">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl"
+          className="my-auto max-w-2xl"
         >
           <div className="flex items-center gap-4">
             <Image
@@ -48,10 +48,10 @@ export function Hero() {
               alt="ChapelCloud"
               width={88}
               height={88}
-              className="h-16 w-16 sm:h-[5.5rem] sm:w-[5.5rem]"
+              className="h-16 w-16 max-[380px]:h-12 max-[380px]:w-12 sm:h-[5.5rem] sm:w-[5.5rem]"
               priority
             />
-            <p className="font-display text-4xl font-semibold tracking-tight text-presence sm:text-5xl md:text-6xl">
+            <p className="font-display text-4xl font-semibold tracking-tight text-presence max-[380px]:text-3xl sm:text-5xl md:text-6xl">
               ChapelCloud
             </p>
           </div>
@@ -60,7 +60,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 font-display text-3xl font-medium leading-[1.15] tracking-tight text-ink sm:text-4xl md:text-[2.75rem]"
+            className="mt-8 font-display text-3xl font-medium leading-[1.15] tracking-tight text-ink max-[380px]:mt-4 sm:text-4xl md:text-[2.75rem]"
           >
             Technology stewardship for churches that are ready to grow.
           </motion.h1>
@@ -69,7 +69,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"
+            className="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted max-[380px]:mt-3 sm:text-xl"
           >
             Software, sanctuary hardware, and managed IT—built as one partnership
             so your team can focus on people, not tickets.
@@ -79,7 +79,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-9 flex flex-wrap items-center gap-3"
+            className="mt-9 flex flex-wrap items-center gap-3 max-[380px]:mt-5 max-[380px]:gap-2"
           >
             <Link
               href="/#contact"
