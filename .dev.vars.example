@@ -1,0 +1,2 @@
+# Copy to .dev.vars for local development. Keep real secrets out of git.
+NEXTJS_ENV=development
