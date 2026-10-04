@@ -7,3 +7,18 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Subagent routing and orchestration
+
+The primary agent acts as an orchestrator, coordinating work through context-scoped subagents rather than performing coding and edits directly. This division of labor optimizes reasoning effort and keeps the main conversation focused on coordination and decision-making.
+
+When delegating to subagents, route work based on task complexity and requirements. Models are listed from cheapest to most capable; prices are Anthropic first-party API rates per million input/output tokens as of 2026-09-25 (see the Anthropic pricing page for current rates):
+
+- **Haiku 4.5 ($1/$5):** Cheapest and fastest. Use for simple, well-defined tasks such as file reads, pattern matching, routine edits, small scripts, exploratory searches and quick lookups.
+- **Sonnet 5.5 ($2/$10):** Balanced speed and capability for general-purpose work such as multi-file refactoring, feature implementation, moderate analysis and code review. The default choice for most substantive tasks.
+- **Opus 5.5 ($4/$20):** Strong reasoning for complex, high-stakes work such as architecture decisions, cross-system design, deep codebase analysis, security review and intricate bug diagnosis. Use when Sonnet's output quality is insufficient.
+- **Fable 5.1 ($10/$50):** Anthropic's most capable widely released model and the most expensive. Turns on hard tasks can run for many minutes. Reserve it for the most demanding reasoning and long-horizon agentic work where Opus falls short.
+
+**Orchestrator responsibilities:** Define the task scope, provide context and constraints, verify subagent work, and coordinate across multiple efforts. Route simple, independent subtasks to Haiku or Sonnet to reduce latency and cost. Reserve Opus and Fable for genuinely complex problems requiring deep reasoning or when task failure would be costly.
+
+**Subagent responsibilities:** Execute focused work within defined scope—code writes, edits, file operations, targeted analysis. Report results clearly so the orchestrator can verify and coordinate the next step.
