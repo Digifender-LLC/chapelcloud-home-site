@@ -72,9 +72,14 @@ export const navGroups: NavGroup[] = [
   {
     id: "managed",
     label: "Managed",
-    href: "/#managed",
+    href: "/managed",
     blurb: "Ongoing stewardship so your team can focus on people.",
     links: [
+      {
+        label: "Care overview",
+        href: "/managed",
+        description: "Remote network, security, and training care.",
+      },
       {
         label: "Monitoring",
         href: "/managed/monitoring",
