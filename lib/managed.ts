@@ -294,6 +294,25 @@ export const managedProducts: ManagedProduct[] = [
   },
 ];
 
+export const careAreas: { title: string; body: string }[] = [
+  {
+    title: "Network stewardship",
+    body: "Wi‑Fi, firewalls, and segmentation designed for guest, staff, and production—assessed and managed remotely.",
+  },
+  {
+    title: "Security systems",
+    body: "Cameras, access control, and alarms planned with privacy and insurance in mind, managed from afar where the platform allows.",
+  },
+  {
+    title: "Volunteer training",
+    body: "Runbooks and live remote training so tent-makers are supported, not stranded.",
+  },
+  {
+    title: "Sunday-aware support",
+    body: "Severity-tiered help when worship-critical systems fail—including service hours.",
+  },
+];
+
 export function getManagedProduct(slug: string): ManagedProduct | undefined {
   return managedProducts.find((p) => p.slug === slug);
 }
